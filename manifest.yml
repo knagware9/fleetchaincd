@@ -3,8 +3,8 @@ applications:
   memory: 256M
   instances: 1
   domain: mybluemix.net
-  name: fleetchain
-  host: fleetchain
+  name: fleetchain11
+  host: fleetchain11
   disk_quota: 1024M
   services:
   - fleetchain-blockchain
