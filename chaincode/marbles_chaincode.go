@@ -551,17 +551,6 @@ func (t *SimpleChaincode) book_car(stub shim.ChaincodeStubInterface, args []stri
 	}
 	res := Driver{}
 	json.Unmarshal(driverAsBytes, &res)
-	 res.Name := name	 //change the user
-	 res.DL := dl
-	 res.DOB := dob
-	 res.Mobile := mobile
-	 res.Password := password
-	 res.Address := address
-	 res.Status := status
-	 res.Modifyby := modifyby
-	 res.Adminemail := adminemail
-	 res.Rejectreason  := rejectreason
-	 res.Anycomment   := anycomment
 	res.Bookingid = args[9]	 //change the user
 	jsonAsBytes, _ := json.Marshal(res)
  	err = stub.PutState(args[1], jsonAsBytes)								//rewrite the user status with email-id as key
